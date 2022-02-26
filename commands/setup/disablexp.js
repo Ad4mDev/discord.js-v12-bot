@@ -5,7 +5,7 @@ module.exports = {
         name: 'disablexp',
         aliases: ['dxp'],
         category: 'moderation',
-        description: 'Disables Server XP Messages',
+        description: 'Disables XP system',
         usage: ' ',
         accessableby: 'Administrators'
     },

@@ -6,7 +6,7 @@ module.exports = {
     name: "guildlist",
     aliases: ["glt"],
     category: "owner",
-    description: "Displays the list of guilds the bot is in!",
+    description: "Displays the list of guilds that the bot is in!",
     usage: " ",
     accessableby: "Owner",
  },

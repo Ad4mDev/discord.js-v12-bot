@@ -10,4 +10,4 @@ module.exports = (bot) => {
           };
         };
         [  "utility"  , "mod" ,,  "setup" ].forEach(x => load(x));
-}; 
+)}; 

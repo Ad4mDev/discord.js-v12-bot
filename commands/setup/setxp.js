@@ -3,9 +3,9 @@ const db = require('quick.db');
 module.exports = {
     config: {
         name: 'setxp',
-        aliases: ['enablexp'],
+        aliases: ['sxp'],
         category: 'moderation',
-        description: 'Enables Server XP Messages',
+        description: 'Enable XP system Messages',
         usage: ' ',
         accessableby: 'Administrators'
     },

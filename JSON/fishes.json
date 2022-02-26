@@ -9,4 +9,9 @@
 		"max": 70,
 		"min": 30
 	},
+	"uncommon": {
+		"symbol": "🐠",
+		"max": 90,
+		"min": 50
+	},
 }

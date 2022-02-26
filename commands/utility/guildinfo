@@ -1,0 +1,41 @@
+const Discord = require("discord.js");
+const { MessageEmbed } = require("discord.js");
+
+
+module.exports = {
+  config : {
+  name: "guild",
+  aliases: ["guildinformation"],
+  description: "Show guild Information!",
+  usage: "guildinfo"
+  },
+  run: async (client, message, args) => {
+    //Start
+    const guild = message.guild;
+    const Emojis = guild.emojis.cache.size || "No Emoji!";
+    const Roles = guild.roles.cache.size || "No Roles!";
+    const Members = guild.memberCount;
+    const Humans = guild.members.cache.filter(member => !member.user.bot).size;
+    const Bots = guild.members.cache.filter(member => member.user.bot).size;
+
+    const embed = new MessageEmbed()
+      .setTitle("Info of " + guild.name)
+      .setColor("2f3136")
+      .setThumbnail(guild.iconURL())
+      .addField(`Name`, guild.name, true)
+      .addField(`🆔 ID`, `${guild.id}`, true)
+      .addField(`👑 Owner`, `${guild.owner.user.tag}`, true)
+      .addField(`<:810517404865396736:915211779683024927> Roles Count`, Roles, true)
+      .addField(`:slight_smile:  Emojis Count`, Emojis, true)
+      .addField(`<:907581318186037278:914936459595743253> Members Count`, Members, true)
+      .addField(`<:907581318186037278:914936459595743253> Humans Count`, Humans, true)
+      .addField(`:robot:  Bots Count`, Bots, true)
+      .addField(`:date: Server Created At`, guild.createdAt.toDateString())
+      .setFooter(`Requested by ${message.author.username}`)
+      .setTimestamp();
+
+    message.channel.send(embed);
+
+    //End
+  }
+};
